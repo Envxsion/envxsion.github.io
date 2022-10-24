@@ -1,0 +1,294 @@
+
+/*Global Rules*/
+*{
+    padding: 0em; /*creates extra space within an element*/
+    margin: 0;/*creates extra space around an element*/
+    font-family: 'Josefin Sans', sans-serif; /*Fonts*/
+    box-sizing: border-box; /*ensures that all elements are sized in this more intuitive way*/
+    cursor: none !important;
+}
+/*Variables*/
+:root{
+    --hs1-margin: 5px 0px 5px;
+    --hs2-margin: 5px 10px 5px;
+    --hs3-margin: 5px 30px 5px;
+    --purple: rgb(169, 29, 230);
+    --pink: rgb(134, 76, 235);
+    --blue: rgb(151, 204, 235);
+    --aqua: rgb(7, 245, 185);
+    --lightgray: rgb(165, 159, 159);
+    --setting1: 5px -3 0 rgb(192, 28, 28), 
+                5px 3 0 rgb(244, 98, 0);
+    --setting2: 0px -10px 0 rgb(30, 255, 0), 
+                0px 10px 0 rgb(34, 216, 146);            
+}
+
+/*Navigation*/
+.menu{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/image-1.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.menu .navbar{
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end*/
+    padding-top: 0.45%;
+    padding-left: 8%;
+    padding-right: 8%;
+    
+
+}
+/*Old Button*/
+/*.btn{
+    text-transform: capitalize;
+    background-color: crimson;
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .6s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}*/
+
+/*New Button*/
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn a{
+    position: relative;
+    display:inline-block; /*display will indicate how a GUI element that occupies space in the layout must not actually add any space to the layout*/
+    padding: 15px 30px;
+    border: 2px solid rgb(0, 255, 149);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color:rgb(0, 255, 242);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0004);
+    transition: 0.5s
+}
+
+.btn a:hover{
+    color: rgb(40, 47, 49);
+}
+.btn a::before{
+    content: '';
+    left: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: 5px -8px 0 rgb(30, 255, 0), 
+                5px 8px 0 rgb(34, 216, 146);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+
+}
+.btn a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 rgb(28, 192, 154), 
+                5px 0 0 rgb(30, 244, 0);
+}
+.btn a::after{
+    content: '';
+    right: -10px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: 5px -8px 0 rgb(30, 255, 0), 
+                5px 8px 0 rgb(34, 216, 146);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+
+}
+.btn a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -4px;
+    box-shadow: 5px 0 0 rgb(28, 192, 154), 
+                5px 0 0 rgb(30, 244, 0);
+}
+/*Disable user from visiting current webpage*/
+.current{
+    position: relative;
+    display:inline-block; /*display will indicate how a GUI element that occupies space in the layout must not actually add any space to the layout*/
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: 0.5s
+}
+.current a::before{
+    content: '';
+    left: 40px;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: var(--setting2);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s, background 1s;
+    transition-delay: 1s, 0.5s, 0s, 0.5s, 0.5s;
+}
+.current a:hover::before{
+    width: 33%;
+    height: 20%;
+    left: 30px;
+    background:rgb(150, 8, 8);
+    box-shadow: var(--setting1);
+    
+}
+.current a::after{
+    content: '';
+    right: 40px;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: var(--setting2);
+    transition: width 1s, left 1s, height 1s, right 1s, box-shadow 1s, background 1s;
+    transition-delay: 1s, 0.5s, 0s, 0.5s, 0.5s, 0.5s;
+}
+.current a:hover::after{
+    width: 33%;
+    height: 20%;
+    right: 35px;
+    background:rgb(150, 8, 8);
+    box-shadow: var(--setting1);
+    
+}
+/* Center Buttons*/
+nav ul li a{
+    list-style-type: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline-block;
+    color:rgb(23, 218, 169);
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a:hover{
+    color:rgb(255, 0, 221);
+    transition: 0.8s ease-in-out;
+}
+/*Remove purple override after visiting a link*/
+a:visited { 
+    text-decoration: none;
+}
+/*Logo*/
+.logo{
+    color:rgb(159, 96, 231);
+    font-size: 35px;
+    letter-spacing: 1;
+    
+}
+
+/*General*/
+html {
+    cursor: none !important;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #0400ff;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: transform .05s;
+}
+
+/*Main*/
+.intro{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    
+}
+.hs1{
+    color:rgb(213, 243, 164);
+    font-size: 22px;
+    letter-spacing: 2px; 
+    margin: var(--hs1-margin);
+    
+}
+.hs2{
+    color: white;
+    font-size: 40px;
+    margin: var(--hs2-margin); /*top bottom left*/
+}
+.hs3{
+    color: white;
+    font-size:28px;
+    margin-bottom: 50px;
+    margin: var(--hs3-margin);
+}
+@keyframes background-pan {
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+    
+}
+.hs2 > .wow{
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--pink),
+        var(--blue),
+        var(--aqua),
+        var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    background-size: 200%;
+}

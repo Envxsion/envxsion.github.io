@@ -1,0 +1,399 @@
+/*Global Rules*/
+*{
+    padding: 0em; /*creates extra space within an element*/
+    margin: 0;/*creates extra space around an element*/
+    box-sizing: border-box; /*ensures that all elements are sized in this more intuitive way*/
+    cursor: none !important;
+}
+/*Variables*/
+:root{
+    --hs1-margin: 5px 0px 5px;
+    --hs2-margin: 5px 10px 5px;
+    --hs3-margin: 5px 30px 5px;
+    --purple: rgb(169, 29, 230);
+    --pink: rgb(134, 76, 235);
+    --blue: rgb(151, 204, 235);
+    --aqua: rgb(7, 245, 185);
+    --lightgray: rgb(165, 159, 159);
+    --setting1: 5px -3 0 rgb(192, 28, 28), 
+                5px 3 0 rgb(244, 98, 0);
+    --setting2: 0px -10px 0 rgb(30, 255, 0), 
+                0px 10px 0 rgb(34, 216, 146);       
+    --card-height: 78vh;
+    --card-width: calc(var(--card-height) / 1.5);     
+}
+
+/*Navigation*/
+.menu{
+    height: 100vh;
+    width: 100%;
+    
+}
+.menu .navbar{
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end*/
+    padding-top: 0.45%;
+    padding-left: 6%;
+    padding-right: 8%;
+    
+
+}
+/*Old Button*/
+/*.btn{
+    text-transform: capitalize;
+    background-color: crimson;
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .6s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}*/
+
+/*New Button*/
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn a{
+    position: relative;
+    display:inline-block; /*display will indicate how a GUI element that occupies space in the layout must not actually add any space to the layout*/
+    padding: 15px 30px;
+    border: 2px solid rgb(0, 255, 149);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color:rgb(0, 255, 242);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0004);
+    transition: 0.5s
+}
+
+.btn a:hover{
+    color: rgb(40, 47, 49);
+}
+.btn a::before{
+    content: '';
+    left: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: 5px -8px 0 rgb(30, 255, 0), 
+                5px 8px 0 rgb(34, 216, 146);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+
+}
+.btn a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 rgb(28, 192, 154), 
+                5px 0 0 rgb(30, 244, 0);
+}
+.btn a::after{
+    content: '';
+    right: -10px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: 5px -8px 0 rgb(30, 255, 0), 
+                5px 8px 0 rgb(34, 216, 146);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+
+}
+.btn a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -4px;
+    box-shadow: 5px 0 0 rgb(28, 192, 154), 
+                5px 0 0 rgb(30, 244, 0);
+}
+/*Disable user from visiting current webpage*/
+.current{
+    position: relative;
+    display:inline-block; /*display will indicate how a GUI element that occupies space in the layout must not actually add any space to the layout*/
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: 0.5s
+}
+.current a::before{
+    content: '';
+    left: 40px;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: var(--setting2);
+    transition: width 1s, left 1s, height 1s, box-shadow 1s, background 1s;
+    transition-delay: 1s, 0.5s, 0s, 0.5s, 0.5s;
+}
+.current a:hover::before{
+    width: 33%;
+    height: 20%;
+    left: 30px;
+    background:rgb(150, 8, 8);
+    box-shadow: var(--setting1);
+    
+}
+.current a::after{
+    content: '';
+    right: 40px;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: translateY(-50%);
+    background:rgb(41, 252, 182);
+    box-shadow: var(--setting2);
+    transition: width 1s, left 1s, height 1s, right 1s, box-shadow 1s, background 1s;
+    transition-delay: 1s, 0.5s, 0s, 0.5s, 0.5s, 0.5s;
+}
+.current a:hover::after{
+    width: 33%;
+    height: 20%;
+    right: 35px;
+    background:rgb(150, 8, 8);
+    box-shadow: var(--setting1);
+    
+}
+/* Center Buttons*/
+nav ul li a{
+    list-style-type: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline-block;
+    color:rgb(23, 218, 169);
+    text-decoration: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a:hover{
+    color:rgb(255, 0, 221);
+    transition: 0.8s ease-in-out;
+}
+/*Remove purple override after visiting a link*/
+a:visited { 
+    text-decoration: none;
+}
+/*Logo*/
+.logo{
+    color:rgb(159, 96, 231);
+    font-size: 35px;
+    letter-spacing: 1;
+    
+}
+
+/*General*/
+html {
+    cursor: none !important;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #0400ff; 
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: transform .05s;
+}
+
+/*Main*/ 
+body{
+    background-image: url('../img/image-5.jpg');
+    background-size: center;
+    background-position: center;
+}
+.skill-container{
+    margin-top: 20vh;
+    margin-left: 20%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    max-width: 1500px;
+    width: calc(100% - 20px);
+
+} 
+.skill-container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5;
+}
+.skill-container .box:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(   );
+    transition: 0.5s;
+}
+.skill-container .box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(   );
+    transition: 0.5s;
+    filter: blur(30px);
+    transition: 0.5s;
+}
+.skill-container .box:hover:before, .skill-container .box:hover::after{
+    transform: skewX(0deg);
+    left: 0px;
+    width: 100%;
+}
+.skill-container .box:nth-child(1):before, .skill-container .box:nth-child(1):after{
+    background: linear-gradient(316deg, #ffe600 0%, #ff0000 74%);
+}
+.skill-container .box:nth-child(2):before, .skill-container .box:nth-child(2):after{
+    background: linear-gradient(316deg, #0eec19 0%, #1cf0ff 74%);
+}
+.skill-container .box:nth-child(3):before, .skill-container .box:nth-child(3):after{
+    background: linear-gradient(316deg, #660bce 0%, #ff00c8 74%);
+}
+.skill-container .box span{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+.skill-container .box span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: 2s linear infinite animate;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.skill-container .box:hover span::before{
+    top: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.skill-container .box span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: 2s linear infinite animate;
+    animation-delay: 1.2s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.skill-container .box:hover span::after{
+    bottom: -50px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.skill-container .box .content{
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
+    color: rgb(77, 66, 224);
+    transition: 0.5s;
+
+
+}
+.skill-container .box:hover .content{
+    left: -25px;
+    transition: 60px 40px;
+}
+.skill-container .box .content h2{
+    font-size: 2em;
+    color: #fff;
+}
+.skill-container .box .content p{
+    font-size: 1.15em;
+    font-weight: bold;
+    color: rgb(88, 34, 88);
+    margin-bottom: 1.4em;
+}
+@keyframes animate {
+    0%,100%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    
+}
