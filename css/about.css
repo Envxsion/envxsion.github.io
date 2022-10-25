@@ -328,23 +328,24 @@ body{
     z-index: 1;
 }
 
-h3, h4, span {
+h3, h4, span, i{
   color: rgb(226, 188, 188);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   margin: 0px;
+  font-size: 2vmin;
 }
-p{
+p {
     text-align: left;
     inline-size: min-content;
     overflow: hidden;
     inline-size: auto;
-    font-size: 0.8em;
+    font-size: 1.52vmin;
 }
 .proj-image {
   align-items: center;
   display: flex;
-  height: 190px;
+  height: 27%;
   margin-bottom: 20px;
   justify-content: center;
   background-image: url('../img/placeholder.png');
