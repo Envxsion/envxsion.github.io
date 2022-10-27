@@ -238,12 +238,13 @@ html {
 /*Main*/ 
 body{
     background-image: url('../img/image-5.jpg');
+    background-repeat: no-repeat;
     background-size: center;
     background-position: center;
 }
 .skill-container{
     margin-top: 20vh;
-    margin-left: 20%;
+    margin-left: 15%;
     display:flex;
     flex-wrap: wrap;
     gap: 0.5em;
