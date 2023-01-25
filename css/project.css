@@ -350,8 +350,11 @@ i {
     display: flex;
     height: 55%;
     margin-bottom: 20px;
+    margin-left: 7em;
     justify-content: center;
-    background-image: url('../img/IMG_3900.jpg');
+    background-image: url('../img/IMG_3900.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
 

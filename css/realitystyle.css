@@ -28,9 +28,10 @@
 .menu{
     height: 100vh;
     width: 100%;
-    background-image: url('https://www.nlspacecampus.eu/cache/3/1920x1080/mob-shutterstock-481251031-20210610135721_1920x1080.jpg');
+    background-image: url('../img/b1.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment:fixed;
     
 }
 .menu .navbar{
@@ -117,7 +118,6 @@ h2 {
 .title, .titleh2 {
   margin-top: 4.2vh;
 }
-
  
 #titleImg {
    position: absolute;
@@ -225,6 +225,7 @@ path {
     background-image: url("https://i.pinimg.com/originals/af/0f/c4/af0fc46fa7f05330435e9e71779af666.jpg");
     background-size: cover;
     background-repeat: space;
+    background-attachment:fixed;
 }
 
 .containers
@@ -237,8 +238,8 @@ path {
 .mainimg
 {
   box-shadow: 6px 6px 7px #888888;
-  width:300px;
-  height:300px;
+  width:16vw;
+  height:30vh;
   position: relative;
   overflow: hidden;
   margin-top:100px;
@@ -251,11 +252,11 @@ path {
 .mainimg:before
 {
   content: '';
-  margin-top:-70px;
-  margin-left:-60px;
+  margin-top:-6vh;
+  margin-left:-3vw;
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width:22vw;
+  height:40vh;
   background: url('../img/IMG_3900.png') center center;
   background-repeat: no-repeat;
   background-size: 40% 40%;
@@ -305,7 +306,7 @@ path {
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') center center;
+  background: url('https://cdn-icons-png.flaticon.com/512/25/25231.png') center center;
   background-size: cover;
 }
 
