@@ -44,8 +44,8 @@ const init_point = (options) => {
     }
 
     const render = () => {
-        ringX = trace(ringX, mouseX, 0.2)
-        ringY = trace(ringY, mouseY, 0.2)
+        ringX = trace(ringX, mouseX, 1)
+        ringY = trace(ringY, mouseY, 1)
 
         if (document.querySelector(".p-action-click:hover")) {
             pointer.style.borderColor = getOption("pointerColor")

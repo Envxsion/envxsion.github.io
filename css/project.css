@@ -334,6 +334,7 @@ i {
   color: rgb(240, 240, 240);
 }
 
+
 .proj-image {
   align-items: center;
   display: flex;
@@ -344,10 +345,24 @@ i {
   overflow: hidden;
 }
 
+.proj-image1 {
+    align-items: center;
+    display: flex;
+    height: 55%;
+    margin-bottom: 20px;
+    margin-left: 7em;
+    justify-content: center;
+    background-image: url('../img/IMG_3900.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
 .proj-image > i {
   font-size: 6em;
   opacity: 0.25;
 }
+
 
 .proj-info-wrapper {
   align-items: center;

@@ -1,0 +1,322 @@
+
+/*Global Rules*/
+*{
+    padding: 0em; /*creates extra space within an element*/
+    margin: 0;/*creates extra space around an element*/
+    font-family: 'Josefin Sans', sans-serif; /*Fonts*/
+    box-sizing: border-box; /*ensures that all elements are sized in this more intuitive way*/
+    cursor: none !important;
+    scroll-behavior: smooth !important;
+}
+/*Variables*/
+:root{
+    --hs1-margin: 5px 0px 5px;
+    --hs2-margin: 5px 10px 5px;
+    --hs3-margin: 5px 30px 5px;
+    --purple: rgb(169, 29, 230);
+    --pink: rgb(134, 76, 235);
+    --blue: rgb(151, 204, 235);
+    --aqua: rgb(7, 245, 185);
+    --lightgray: rgb(165, 159, 159);
+    --setting1: 5px -3 0 rgb(192, 28, 28), 
+                5px 3 0 rgb(244, 98, 0);
+    --setting2: 0px -10px 0 rgb(30, 255, 0), 
+                0px 10px 0 rgb(34, 216, 146);            
+}
+
+/*Navigation*/
+.menu{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/b1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    
+}
+.menu .navbar{
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Top Nav Bar*/
+nav { 
+    float: right;
+    margin-right: 7em;
+}
+
+nav ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li { 
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a { 
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover { 
+    transform: scale(1.2);
+
+}
+
+nav a::before { 
+  content: '';
+  display: block;
+  height: 5px;
+  background: white;
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+nav ul li a:hover{
+    color:rgb(255, 0, 221);
+    transition: 0.8s ease-in-out;
+}
+/*Remove purple override after visiting a link*/
+a:visited { 
+    text-decoration: none;
+}
+
+/*General*/
+html {
+    cursor: none !important;
+}
+h1 {
+  font-size: 30px;
+  position: absolute;
+  left: 150px;
+  top: 43px;
+  color: white;
+}
+
+h2 {
+  top: 78px;
+  font-size: 20px;
+  position: absolute;
+  left: 150px;
+  color: white;
+}
+.title, .titleh2 {
+  margin-top: 4.2vh;
+}
+ 
+#titleImg {
+   position: absolute;
+   left: 40px;
+   top: 40px;
+   height: 100px;
+   width: 100px;
+   background: url('https://media.discordapp.net/attachments/1039080494454820885/1065840866998108240/lOGO.png?width=408&height=427');
+   background-size: cover;
+   background-repeat: space;
+ }
+/*custom cursor config*/
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #0400ff;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 102;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: transform .05s;
+}
+
+/*SVG Point Down*/
+svg {
+    position: absolute;
+    top: 80%;
+    left: 48%;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+path {
+  animation: bounce 15s ease 0s infinite normal forwards;
+}
+
+
+/*About Us*/
+#aboutsocials {
+  position: absolute;
+  top: 120%;
+  color: white;
+  font-size: 90;
+  width:300px;
+  left: 40px;
+
+}
+#aboutext {
+  position: absolute;
+  top: 120%;
+  color: white;
+  font-size: 90;
+  width:300px;
+  left: 46.4vw;
+
+}
+#about {
+  position: absolute;
+  top: 110%;
+  color: white;
+  font-size: 90;
+  left: 47%;
+
+}
+
+.abour {
+    width: 100%;
+    height: 100vh;
+    z-index:0; 
+    background-image: url("https://i.pinimg.com/originals/af/0f/c4/af0fc46fa7f05330435e9e71779af666.jpg");
+    background-size: cover;
+    background-repeat: space;
+    background-attachment:fixed;
+}
+
+.containers
+{
+  width:550px;
+  height:100%;
+  margin-left:10px;
+}
+
+.mainimg
+{
+  box-shadow: 6px 6px 7px #888888;
+  width:16vw;
+  height:30vh;
+  position: relative;
+  overflow: hidden;
+  margin-top:100px;
+  margin-left:135px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: black;
+}
+.mainimg:before
+{
+  content: '';
+  margin-top:-6vh;
+  margin-left:-3vw;
+  position: absolute;
+  width:22vw;
+  height:40vh;
+  background: url('../img/IMG_3900.png') center center;
+  background-repeat: no-repeat;
+  background-size: 40% 40%;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.social1
+{
+  box-shadow: 6px 6px 7px #888888;
+  width:80px;
+  height:80px;
+  background-color:#c02823;
+  margin-top:24px;
+  margin-left:310px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: url('https://www.edigitalagency.com.au/wp-content/uploads/new-small-Instagram-logo-full-colour-png-184x184-pixels.png') center center;
+  background-size: cover;
+}
+
+.social2
+{
+  box-shadow: 6px 6px 7px #888888;
+  width:80px;
+  height:80px;
+  background-color:#d5d826;
+  margin-top:-142px;
+  margin-left:372px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: url('https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png') center center;
+  background-size: cover;
+}
+
+.social3
+{
+  box-shadow: 6px 6px 7px #888888;
+  width:80px;
+  height:80px;
+  background-color:#0fe40f;
+  margin-top:-142px;
+  margin-left:434px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: url('https://cdn-icons-png.flaticon.com/512/25/25231.png') center center;
+  background-size: cover;
+}
+
+.content
+{
+  height:100%;
+  width:500px;
+}
+.mainimg:hover , .social1:hover , .social2:hover , .social3:hover 
+{
+  box-shadow: 3px 3px 7px #44bec7;
+  cursor:pointer;
+}

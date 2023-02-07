@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio website</title>
+	<link rel="stylesheet" type="text/css" href="css/realitystyle.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+
+<body>
+		<div class = "menu">
+			<nav>
+			<h1 class="logo"></h1>
+      		<img id='titleImg' src='https://media.discordapp.net/attachments/1039080494454820885/1065840866998108240/lOGO.png?width=408&height=427'>
+     		<h1 class="title">
+        		Reality Productions
+      		</h1>
+    		<h2 class="titleh2">
+      			Making Dreams Reality.
+    		</h2>
+			<ul>
+				<li><a href="realityhome.html" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+			</ul>
+		</nav>
+        </div>
+		<a href="#about">
+			<svg height="400" width="400">
+			<path d="M2,25 C2,6.25 27,6.25 27,25 L27,50 C27,67.5 2,67.5 2,50 L2,25 M17,20 L17,52 L7.5,45 L17,52" stroke="white" stroke-width="3" fill="none"></path>
+			  Scroll Down...
+			</svg>
+		  </a>
+		<section class='abour'>
+				<h1 id="about">
+					About Us
+				</h1>
+				<h2 id="aboutext">Stuff about us goes here...</h2>
+				
+			<div height='500' width='200'>
+				<h3 id='aboutsocials'>
+					<div class="containers">
+					
+					  <div class="mainimg"></div>
+					  <div class="social1">
+						<i class="fa fa-facebook" aria-hidden="true"></i> 
+					  </div>
+					  <div class="social2">
+					  <i class="fa fa-dribbble" aria-hidden="true"></i>
+					  </div>
+					  <div class="social3">
+						<i class="fa fa-codepen" aria-hidden="true"></i>
+					  </div>
+					</div>
+				</h3>
+			</div>
+		</section>
+
+</body>
+<script src="./js/realityjs.js"></script>
+<script src="./js/pointer.js"></script>
+    <script>
+        init_point({
+            pointerColor: "00ffaa",
+			ringSize: 15,
+			ringClickSize: 8
+        })
+    </script>
+
+</html>
